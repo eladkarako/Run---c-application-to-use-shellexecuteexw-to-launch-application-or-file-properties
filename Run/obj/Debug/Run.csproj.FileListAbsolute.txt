@@ -1,0 +1,6 @@
+C:\Users\Elad\Desktop\Run\Run\obj\Debug\Run.csprojResolveAssemblyReference.cache
+C:\Users\Elad\Desktop\Run\Run\bin\Debug\Run.exe.config
+C:\Users\Elad\Desktop\Run\Run\bin\Debug\Run.exe
+C:\Users\Elad\Desktop\Run\Run\bin\Debug\Run.pdb
+C:\Users\Elad\Desktop\Run\Run\obj\Debug\Run.exe
+C:\Users\Elad\Desktop\Run\Run\obj\Debug\Run.pdb

@@ -1,0 +1,25 @@
+typedef struct _SHELLEXECUTEINFOW {
+  DWORD     cbSize;                 //Required. The size of this structure, in bytes.
+  ULONG     fMask;                  //Flags that indicate the content and validity of the other structure members; a combination of the following values:
+                                    // SEE_MASK_DEFAULT   (0x00000000)        Use default values.
+                                    // SEE_MASK_CLASSNAME (0x00000001)        Use the class name given by the lpClass member. If both SEE_MASK_CLASSKEY and SEE_MASK_CLASSNAME are set, the class key is used.
+                                    // SEE_MASK_CLASSKEY  (0x00000003)        Use the class key given by the hkeyClass member. If both SEE_MASK_CLASSKEY and SEE_MASK_CLASSNAME are set, the class key is used.
+                                    // SEE_MASK_IDLIST    (0x00000004)        Use the item identifier list given by the lpIDList member. The lpIDList member must point to an ITEMIDLIST structure.
+                                    // SEE_MASK_UNICODE   (0x00004000)        Use this flag to indicate a Unicode application.
+  HWND      hwnd;
+  LPCWSTR   lpVerb;
+  LPCWSTR   lpFile;
+  LPCWSTR   lpParameters;
+  LPCWSTR   lpDirectory;
+  int       nShow;
+  HINSTANCE hInstApp;
+  void      *lpIDList;
+  LPCWSTR   lpClass;
+  HKEY      hkeyClass;
+  DWORD     dwHotKey;
+  union {
+    HANDLE hIcon;
+    HANDLE hMonitor;
+  } DUMMYUNIONNAME;
+  HANDLE    hProcess;
+} SHELLEXECUTEINFOW, *LPSHELLEXECUTEINFOW;

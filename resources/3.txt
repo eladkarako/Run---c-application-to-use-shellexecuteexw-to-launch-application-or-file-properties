@@ -1,0 +1,33 @@
+[StructLayout(LayoutKind.Sequential)]
+private struct SHELLEXECUTEINFO{
+	internal int cbSize;
+	internal int fMask;
+	internal int hwnd;
+	internal string lpVerb;
+	internal string lpFile;
+	internal string lpParameters;
+	internal string lpDirectory;
+	internal int nShow;
+	internal int hInstApp;
+	// fields
+	internal int lpIDList;
+	internal string lpClass;
+	internal int hkeyClass;
+	internal int dwHotKey;
+	internal int hIcon;
+	internal int hProcess;
+}
+
+private const int LIS_SHELLEXECURL = 0x8;
+
+
+[DllImport("shell32.dll")]
+static extern int ShellExecuteEx ( 
+	 ref SHELLEXECUTEINFOA lpExecInfo);
+	 
+	 
+	 
+	 
+BOOL ShellExecuteExW(
+  SHELLEXECUTEINFOW *pExecInfo
+);
